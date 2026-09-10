@@ -8,6 +8,7 @@ class StudentModel {
   final String gender;
   final String phone;
   final String address;
+  final String? photoUrl;
   final String createdAt;
 
   StudentModel({
@@ -18,6 +19,7 @@ class StudentModel {
     required this.gender,
     required this.phone,
     required this.address,
+    this.photoUrl,
     required this.createdAt,
   });
 
@@ -29,6 +31,7 @@ class StudentModel {
       'gender': gender,
       'phone': phone,
       'address': address,
+      'photo_url': photoUrl,
       'created_at': createdAt,
     };
   }
@@ -42,6 +45,7 @@ class StudentModel {
       gender: map['gender'] as String? ?? '',
       phone: map['phone'] as String? ?? '',
       address: map['address'] as String? ?? '',
+      photoUrl: map['photo_url'] as String?,
       createdAt: map['created_at'] as String? ?? '',
     );
   }
@@ -59,6 +63,7 @@ class StudentModel {
     String? gender,
     String? phone,
     String? address,
+    String? photoUrl,
     String? createdAt,
   }) {
     return StudentModel(
@@ -69,6 +74,7 @@ class StudentModel {
       gender: gender ?? this.gender,
       phone: phone ?? this.phone,
       address: address ?? this.address,
+      photoUrl: photoUrl ?? this.photoUrl,
       createdAt: createdAt ?? this.createdAt,
     );
   }

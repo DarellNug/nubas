@@ -46,16 +46,21 @@ class StudentCard extends StatelessWidget {
                   backgroundColor: isMale
                       ? const Color(0xFFE0F2FE)
                       : const Color(0xFFFCE7F3),
-                  child: Text(
-                    student.name.isNotEmpty
-                        ? student.name.substring(0, 1).toUpperCase()
-                        : 'S',
-                    style: TextStyle(
-                      color: genderColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
+                  backgroundImage: student.photoUrl != null && student.photoUrl!.isNotEmpty
+                      ? NetworkImage(student.photoUrl!)
+                      : null,
+                  child: student.photoUrl != null && student.photoUrl!.isNotEmpty
+                      ? null
+                      : Text(
+                          student.name.isNotEmpty
+                              ? student.name.substring(0, 1).toUpperCase()
+                              : 'S',
+                          style: TextStyle(
+                            color: genderColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
                 ),
                 const SizedBox(width: 12),
                 Expanded(

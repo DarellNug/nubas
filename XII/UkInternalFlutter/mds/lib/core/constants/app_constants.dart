@@ -2,6 +2,8 @@ class AppConstants {
   static const String appName = 'MDS - Manajemen Data Siswa';
   static const String adminUsername = 'admin';
   static const String adminPassword = 'admin123';
+  static const String cloudinaryCloudName = 'bqy2w9i8';
+  static const String cloudinaryUploadPreset = 'mds_preset';
 
   static const List<String> classList = [
     'X AK 1',

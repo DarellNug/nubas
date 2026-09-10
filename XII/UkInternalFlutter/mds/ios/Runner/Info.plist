@@ -66,5 +66,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Aplikasi membutuhkan izin akses galeri untuk memilih foto siswa.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Aplikasi membutuhkan izin akses kamera untuk mengambil foto siswa.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Aplikasi membutuhkan izin akses mikrofon.</string>
 </dict>
 </plist>

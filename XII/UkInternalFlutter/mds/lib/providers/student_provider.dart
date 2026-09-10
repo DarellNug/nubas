@@ -68,10 +68,10 @@ class StudentProvider extends ChangeNotifier {
   int get totalFemale => _students.where((s) => s.gender == 'Perempuan').length;
 
   List<String> get availableClasses {
-    final set = <String>{...AppConstants.classList};
+    final set = <String>{};
     for (final s in _students) {
-      if (s.className.isNotEmpty) {
-        set.add(s.className);
+      if (s.className.trim().isNotEmpty) {
+        set.add(s.className.trim());
       }
     }
     final list = set.toList();

@@ -1,0 +1,99 @@
+﻿No_Loker,Baris,Nomor,Kode_Silinder,Jumlah_Anak_Kunci,Status_Silinder,Status_Kunci,Keterangan
+A1,A,1,B827,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A2,A,2,C683,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A3,A,3,C667,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A4,A,4,B741,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap (Seri tepat sebelum Kunci Bebas B742)
+A5,A,5,C614,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A6,A,6,C607,2,Macet Oksidasi,Lengkap,2 anak kunci ada; silinder macet teroksidasi karat
+A7,A,7,C651,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A8,A,8,C625,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A9,A,9,C652,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A10,A,10,C715,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A11,A,11,C691,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+A12,A,12,C664,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B1,B,1,B823,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B2,B,2,B735,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B3,B,3,B834,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B4,B,4,B762,1,Ada,Kurang 1,"Silinder ada, hanya ada 1 anak kunci (kurang 1)"
+B5,B,5,B732,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B6,B,6,B738,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B7,B,7,B755,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B8,B,8,B727,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B9,B,9,C694,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B10,B,10,B828,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B11,B,11,B750,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+B12,B,12,C646,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+C1,C,1,A733,1,Ada,Cocok Kunci Bebas,Silinder cocok dengan Kunci Bebas A733 (1 anak kunci)
+C2,C,2,Hilang,0,Hilang,Tidak Ada,"Silinder fisik hilang, anak kunci tidak ada"
+C3,C,3,A607,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+C4,C,4,A807,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+C5,C,5,A635,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+C6,C,6,A716,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+C7,C,7,A780,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+C8,C,8,Hilang,0,Hilang,Tidak Ada,"Silinder fisik hilang, anak kunci tidak ada"
+C9,C,9,Hilang,0,Hilang,Tidak Ada,"Silinder fisik hilang, anak kunci tidak ada"
+C10,C,10,Hilang,0,Hilang,Tidak Ada,"Silinder fisik hilang, anak kunci tidak ada"
+C11,C,11,Hilang,0,Hilang,Tidak Ada,"Silinder fisik hilang, anak kunci tidak ada"
+C12,C,12,C717,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D1,D,1,C831,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D2,D,2,C722,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D3,D,3,C750,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D4,D,4,Hilang,0,Hilang,Tidak Ada,"Silinder fisik hilang, anak kunci tidak ada"
+D5,D,5,C836,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D6,D,6,C693,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D7,D,7,C668,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D8,D,8,C780,0,Ada,Tidak Ada,"Silinder ada (kode identik dgn H7), anak kunci tidak ada"
+D9,D,9,C718,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D10,D,10,C713,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D11,D,11,C707,0,Ada,Tidak Ada,"Silinder ada, anak kunci tidak ada"
+D12,D,12,C681,1,Ada,Kurang 1,"Silinder ada, hanya ada 1 anak kunci"
+E1,E,1,A629,0,Ada,Belum Dicek,"Silinder ada, fisik anak kunci belum teridentifikasi"
+E2,E,2,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E3,E,3,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E4,E,4,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E5,E,5,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E6,E,6,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E7,E,7,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E8,E,8,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E9,E,9,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+E10,E,10,B802,0,Ada,Belum Dicek,"Silinder ada, fisik anak kunci belum teridentifikasi"
+E11,E,11,B832,0,Ada,Belum Dicek,"Silinder ada, fisik anak kunci belum teridentifikasi"
+E12,E,12,Belum Dicek,0,Belum Dicek,Belum Dicek,Silinder dan anak kunci belum dicek
+F1,F,1,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F2,F,2,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F3,F,3,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F4,F,4,A652,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+F5,F,5,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F6,F,6,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F7,F,7,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F8,F,8,B764,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+F9,F,9,Belum Dicek,Di Ganda,Belum Dicek,Dipegang Ganda,Kode silinder belum dicatat; kunci dipegang Ganda
+F10,F,10,A686,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+F11,F,11,B816,Di Ganda,Ada,Dipegang Ganda,"Silinder B816, anak kunci dipegang Ganda"
+F12,F,12,A623,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+G1,G,1,C757,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+G2,G,2,C818,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+G3,G,3,C135,0,Ada,Tidak Ada,"Silinder C135 ada, anak kunci tidak ada"
+G4,G,4,C729,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+G5,G,5,C764,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+G6,G,6,C760,1,Ada,Kurang 1,"Silinder ada (tercatat C760/C765), 1 anak kunci"
+G7,G,7,B829,0,Ada,Tidak Ada,"Silinder B829 ada, anak kunci tidak ada"
+G8,G,8,C791,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+G9,G,9,Hilang,1,Hilang,Ada 1 Kunci,Silinder hilang (kode awal B820); 1 anak kunci ada
+G10,G,10,B780,0,Ada,Tidak Ada,"Silinder B780 ada (kode sama dgn H11), anak kunci tidak ada"
+G11,G,11,Hilang,1,Hilang,Ada 1 Kunci,Silinder hilang (kode awal B769); 1 anak kunci ada
+G12,G,12,B793,0,Ada,Tidak Ada,"Silinder B793 ada, anak kunci tidak ada"
+H1,H,1,C742,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+H2,H,2,A645,2,Ada,Lengkap,"Silinder ada (A645/A643), 2 anak kunci lengkap"
+H3,H,3,A601,2,Ada,Lengkap,"Silinder ada (A601/A604), 2 anak kunci lengkap"
+H4,H,4,A660,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+H5,H,5,Hilang,2,Hilang,Ada 2 Kunci,Silinder hilang (kode awal B619); 2 anak kunci ada
+H6,H,6,B779,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+H7,H,7,C780,2,Ada,Lengkap,"Silinder ada (C780/C830, kode sama dgn D8), 2 anak kunci"
+H8,H,8,B777,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap
+H9,H,9,Hilang,2,Hilang,Ada 2 Kunci,Silinder hilang (kode awal B809); 2 anak kunci ada
+H10,H,10,B833,1,Ada,Kurang 1,"Silinder ada, 1 anak kunci"
+H11,H,11,B780,1,Ada,Kurang 1,"Silinder ada (B780/B786, kode sama dgn G10), 1 anak kunci"
+H12,H,12,B812,2,Ada,Lengkap,Silinder dan 2 anak kunci lengkap (Seri tepat setelah Kunci Bebas B811)
+KUNCI_BEBAS_1,-,-,B742,2,Belum Ditemukan,Ada 2 Kunci,"Kunci bebas tanpa label loker, seri tepat setelah A4 (B741). Kemungkinan milik deretan E/F"
+KUNCI_BEBAS_2,-,-,B811,1,Belum Ditemukan,Ada 1 Kunci,"Kunci bebas tanpa label loker, seri tepat sebelum H12 (B812). Kemungkinan milik deretan E/F"
