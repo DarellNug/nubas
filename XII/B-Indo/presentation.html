@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Flashing Custom ROM (LineageOS)</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-main: #e2e8f0;
+            --accent-glow: #00f0ff;
+            --accent-dim: #005f73;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            user-select: none; /* Mencegah seleksi teks saat klik cepat */
+        }
+
+        /* Latar belakang tema dark tech */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                linear-gradient(rgba(11, 15, 25, 0.9), rgba(11, 15, 25, 0.9)),
+                repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0, 240, 255, 0.05) 1px, rgba(0, 240, 255, 0.05) 2px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .presentation-container {
+            height: 100vh;
+            overflow-y: auto;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .presentation-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 8vw;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .content-box {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            border-left: 4px solid var(--accent-glow);
+            padding: 3.5rem;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .slide-cover .content-box {
+            text-align: center;
+            border-left: none;
+            border-top: 4px solid var(--accent-glow);
+            border-bottom: 4px solid var(--accent-glow);
+            border-radius: 12px;
+            padding: 6rem 3rem;
+        }
+
+        h1, h2 {
+            color: var(--accent-glow);
+            margin-top: 0;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.6rem;
+            color: #94a3b8;
+            margin-bottom: 0;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        ul {
+            font-size: 1.7rem;
+            line-height: 1.6;
+            padding-left: 2rem;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 1.2rem;
+        }
+
+        li strong {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        
+        code {
+            background-color: rgba(0, 240, 255, 0.1);
+            color: var(--accent-glow);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .hint {
+            position: fixed;
+            bottom: 25px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.1rem;
+            color: rgba(148, 163, 184, 0.8);
+            pointer-events: none;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+
+        /* Zona klik tidak terlihat */
+        .click-zone {
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            width: 50vw;
+            z-index: 5;
+            cursor: pointer;
+            /* Border transparan untuk debugging jika perlu */
+            /* border: 1px solid rgba(255,0,0,0.1); */
+        }
+        .click-zone-left {
+            left: 0;
+        }
+        .click-zone-right {
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            ul { font-size: 1.1rem; }
+            .content-box { padding: 2rem 1.5rem; }
+            .hint { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sistem Navigasi Split-Screen (Transparan/Tidak terlihat) -->
+    <div class="click-zone click-zone-left" onclick="nextSlide()" title="Lanjut (Next)"></div>
+    <div class="click-zone click-zone-right" onclick="prevSlide()" title="Kembali (Previous)"></div>
+
+    <div class="presentation-container" id="presentation">
+        
+        <!-- Slide 1: Hero / Cover -->
+        <div class="slide slide-cover">
+            <div class="content-box">
+                <h1>Panduan Flashing Custom ROM (LineageOS)</h1>
+                <p class="subtitle">Prosedur instalasi sistem operasi kustom untuk perangkat Android Anda.</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Fase 1 - Persiapan -->
+        <div class="slide">
+            <div class="content-box">
+                <h2>Fase 1: Persiapan (Yang Anda Butuhkan)</h2>
+                <ul>
+                    <li><strong>Baterai HP:</strong> Pastikan terisi minimal 50%.</li>
+                    <li><strong>PC/Laptop:</strong> Siapkan folder file ROM (LineageOS) dan file TWRP.</li>
+                    <li><strong>Odin (Flashing Tool):</strong> Unduh versi 3.14.4 dan ekstrak di PC.</li>
+                    <li><strong>Samsung USB Drivers:</strong> Instal di PC agar HP dapat terdeteksi.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3: Fase 2 - Unlock Bootloader -->
+        <div class="slide">
+            <div class="content-box">
+                <h2>Fase 2: Unlock Bootloader</h2>
+                <ul>
+                    <li>Aktifkan Opsi Pengembang (Ketuk "Build number" 7x di Pengaturan > Tentang ponsel).</li>
+                    <li>Buka Opsi Pengembang: Aktifkan "OEM unlocking" dan "USB debugging".</li>
+                    <li>Matikan HP. Tahan tombol <strong>Volume Atas + Bawah</strong> bersamaan, lalu colok kabel USB ke PC.</li>
+                    <li>Di layar peringatan (biru/hijau), lepas tombol. Tahan <strong>Volume Atas 5 detik</strong> untuk masuk "Device unlock mode".</li>
+                    <li>Tekan Volume Atas 1x untuk konfirmasi. HP akan terformat dan UBL selesai! (Lewati semua setup awal Android).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: Fase 3 - Flash TWRP -->
+        <div class="slide">
+            <div class="content-box">
+                <h2>Fase 3: Flash TWRP Recovery</h2>
+                <ul>
+                    <li><strong>Masuk Download Mode:</strong> Matikan HP, tahan Vol Atas + Bawah, colok USB ke PC, tekan Vol Atas 1x.</li>
+                    <li>Buka Odin3 v3.14.4.exe di PC. Pastikan ada kotak biru di bawah "ID:COM".</li>
+                    <li><strong>PENTING:</strong> Di tab "Options" Odin, hilangkan centang pada "Auto Reboot".</li>
+                    <li>Klik tombol "AP", masukkan file <code>twrp-3.7.1.img.tar</code>.</li>
+                    <li>Klik "Start". Tunggu sampai muncul notifikasi "PASS!" berwarna hijau.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: Fase 4 - Masuk TWRP & Format Data -->
+        <div class="slide">
+            <div class="content-box">
+                <h2>Fase 4: Masuk TWRP & Format Data</h2>
+                <ul>
+                    <li><strong>Paksa Restart</strong> dari layar Download: Tahan Vol Bawah + Power selama ~7 detik.</li>
+                    <li>Tepat saat layar mati, langsung ganti tahan <strong>Vol Atas + Power</strong> sampai logo TWRP muncul.</li>
+                    <li>Di menu TWRP, pilih <strong>"Wipe" > "Format Data"</strong>.</li>
+                    <li>Ketik <code>yes</code> lalu tekan centang (untuk membuka enkripsi penyimpanan).</li>
+                    <li>Kembali ke menu utama, pilih <strong>"Reboot" > "Recovery"</strong>. (HP akan masuk kembali ke TWRP).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 6: Fase 5 - Instalasi LineageOS -->
+        <div class="slide">
+            <div class="content-box">
+                <h2>Fase 5: Instalasi LineageOS</h2>
+                <ul>
+                    <li>Saat di TWRP, pastikan HP terhubung ke PC. Buka File Explorer PC (HP akan terbaca sebagai USB drive).</li>
+                    <li>Copy file .zip LineageOS dari PC ke Internal Storage HP.</li>
+                    <li>Di layar TWRP, pilih menu <strong>"Install"</strong>.</li>
+                    <li>Cari dan pilih file .zip LineageOS yang baru saja disalin.</li>
+                    <li>Geser (Swipe to confirm Flash) di bagian bawah layar.</li>
+                    <li>Tunggu proses selesai. Jika sudah "Successful", ketuk <strong>"Reboot System"</strong>. Selesai!</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const container = document.getElementById('presentation');
+        const slides = document.querySelectorAll('.slide');
+        
+        function getCurrentSlideIndex() {
+            const slideHeight = container.clientHeight;
+            const scrollTop = container.scrollTop;
+            return Math.round(scrollTop / slideHeight);
+        }
+
+        // Navigasi Slide
+        function nextSlide() {
+            const current = getCurrentSlideIndex();
+            if (current < slides.length - 1) {
+                container.scrollTo({
+                    top: (current + 1) * container.clientHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function prevSlide() {
+            const current = getCurrentSlideIndex();
+            if (current > 0) {
+                container.scrollTo({
+                    top: (current - 1) * container.clientHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Dukungan Keyboard 
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                nextSlide();
+            } else if (e.key === 'ArrowRight') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
