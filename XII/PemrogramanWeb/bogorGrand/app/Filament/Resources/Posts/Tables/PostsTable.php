@@ -31,7 +31,7 @@ class PostsTable
             ])
             ->filters([
                 //
-            ])
+            ]
             ->recordActions([
                 EditAction::make(),
             ])
